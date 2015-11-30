@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="myscript-cordova-plugin"
+    version="0.2.3">
+    <name>Myscript</name>
+    <author>bguiz   </author>
+    <description>Myscript Cordova Plugin</description>
+    <license>GPL-3.0</license>
+    <keywords>cordova,myscript,plugin</keywords>
+    <engines>
+        <engine name="cordova-android" version=">=5.4.0" />
+        <engine name="cordova-ios" version=">=5.4.0" />
+    </engines>
+    <js-module src="www/MyscriptCordova.js" name="MyscriptCordova">
+        <clobbers target="MyscriptCordova" />
+    </js-module>
+    <platform name="android">
+
+        <!-- core SDK -->
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScript2D.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScript2D.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScript2D.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptAnalyzer.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptAnalyzer.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptAnalyzer.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptDocument.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptDocument.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptDocument.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptEngine.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptEngine.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptEngine.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptInkSearch.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptInkSearch.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptInkSearch.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptInk.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptInk.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptInk.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptMath.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptMath.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptMath.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptPrediction.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptPrediction.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptPrediction.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptShape.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptShape.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptShape.so" arch="armeabi-v7a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptText.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptText.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptText.so" arch="armeabi-v7a" />
+    </platform>
+</plugin>
