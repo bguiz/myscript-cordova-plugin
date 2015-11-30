@@ -1,0 +1,13 @@
+{
+	"name": "myscript-cordova-plugin",
+	"version": "0.0.0",
+	"license": "GPL-3.0",
+	"author": "bguiz",
+	"repository": "bguiz/myscript-cordova-plugin",
+	"scripts": {
+		"download": "more download.md",
+		"setup": "npm run test-download && npm run extract-download",
+		"test-download": "TODO",
+		"extract-download": "TODO"
+	}
+}
