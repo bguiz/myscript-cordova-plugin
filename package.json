@@ -6,8 +6,13 @@
 	"repository": "bguiz/myscript-cordova-plugin",
 	"scripts": {
 		"download": "more download.md",
-		"setup": "npm run test-download && npm run extract-download",
+		"setup": "npm run test-download && npm run extract-download && npm run replace-cert",
 		"test-download": "TODO",
-		"extract-download": "TODO"
+		"extract-download": "npm run extract-download-android && npm run extract-download-ios",
+		"extract-download-android": "cd download && unzip MyScript_ATK-android-1.3.0.zip",
+		"extract-download-ios": "cd download && unzip MyScript_ATK-ios-1.3.0.zip",
+		"replace-cert": "npm run replace-cert-android && npm run replace-cert-ios",
+		"replace-cert-android": "cd download && cp MyCertificate.java MyScript_ATK-android-1.3.0/samples/atk-samples-certificate/src/com/myscript/certificate/MyCertificate.java",
+		"replace-cert-ios": "cd download && cp MyCertificate.h MyScript_ATK-ios-1.3.0/samples/MyCertificate.h"
 	}
 }
