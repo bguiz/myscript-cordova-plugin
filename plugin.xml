@@ -4,7 +4,7 @@
     id="myscript-cordova-plugin"
     version="0.2.3">
     <name>Myscript</name>
-    <author>bguiz   </author>
+    <author>bguiz</author>
     <description>Myscript Cordova Plugin</description>
     <license>GPL-3.0</license>
     <keywords>cordova,myscript,plugin</keywords>
@@ -48,5 +48,46 @@
         <lib-file src="download/myscript-android/libs/sdk/libs/x86/libMyScriptText.so" arch="x86" />
         <lib-file src="download/myscript-android/libs/sdk/libs/arm64-v8a/libMyScriptText.so" arch="arm64-v8a" />
         <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptText.so" arch="armeabi-v7a" />
+
+        <!-- individual components -->
+        <source-file
+            src="download/myscript-android/libs/gew/libs/AtkGew.jar"
+            target-dir="src/com/myscript/atk/gew" />
+        <source-file
+            src="download/myscript-android/libs/gew-lib-styleable/libs/AtkGewStyleable.jar"
+            target-dir="src/com/myscript/atk/gew/styleable" />
+        <source-file
+            src="download/myscript-android/libs/inw/libs/AtkInw.jar"
+            target-dir="src/com/myscript/atk/inw" />
+        <source-file
+            src="download/myscript-android/libs/itc/libs/AtkItc.jar"
+            target-dir="src/com/myscript/atk/itc" />
+        <lib-file src="download/myscript-android/libs/itc/libs/x86/AtkItc.jar" arch="x86" />
+        <lib-file src="download/myscript-android/libs/itc/libs/arm64-v8a/AtkItc.jar" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/itc/libs/armeabi-v7a/AtkItc.jar" arch="armeabi-v7a" />
+        <source-file
+            src="download/myscript-android/libs/maw/libs/AtkMaw.jar"
+            target-dir="src/com/myscript/atk/maw" />
+        <source-file
+            src="download/myscript-android/libs/maw-lib-styleable/libs/AtkMawStyleable.jar"
+            target-dir="src/com/myscript/atk/maw/styleable" />
+        <source-file
+            src="download/myscript-android/libs/mltw/libs/AtkMltw.jar"
+            target-dir="src/com/myscript/atk/mltw" />
+        <source-file
+            src="download/myscript-android/libs/scw/libs/AtkScw.jar"
+            target-dir="src/com/myscript/atk/scw" />
+        <source-file
+            src="download/myscript-android/libs/sltw/libs/AtkSltw.jar"
+            target-dir="src/com/myscript/atk/sltw" />
+        <source-file
+            src="download/myscript-android/libs/sltw-lib-styleable/libs/AtkSltw-styleable.jar"
+            target-dir="src/com/myscript/atk/sltw/styleable" />
+        <source-file
+            src="download/myscript-android/libs/styluscore/libs/com.myscript.atk.styluscore.jar"
+            target-dir="src/com/myscript/atk/styluscore" />
+        <lib-file src="download/myscript-android/libs/styluscore/libs/x86/libStylusCore.so" arch="x86" />
+        <lib-file src="download/myscript-android/libs/styluscore/libs/arm64-v8a/libStylusCore.so" arch="arm64-v8a" />
+        <lib-file src="download/myscript-android/libs/styluscore/libs/armeabi-v7a/libStylusCore.so" arch="armeabi-v7a" />
     </platform>
 </plugin>
