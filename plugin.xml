@@ -8,6 +8,7 @@
     <description>Myscript Cordova Plugin</description>
     <license>GPL-3.0</license>
     <keywords>cordova,myscript,plugin</keywords>
+    <repo>https://github.com/bguiz/myscript-cordova-plugin.git</repo>
     <info>
         You need to download appropriate files (see `download.md`),
         and then execute `npm run setup` in this plugin's folder.
@@ -20,7 +21,7 @@
         <clobbers target="MyscriptCordova" />
     </js-module>
     <platform name="android">
-        <!-- expose classes -->
+        <!-- define injections into main app's config file -->
         <config-file target="res/xml/config.xml" parent="plugins">
           <plugin name="GeometryWidget" value="com.myscript.atk.gew.GeometryWidget" />
           <plugin name="GeometryWidgetApi" value="com.myscript.atk.gew.GeometryWidgetApi" />
@@ -31,10 +32,19 @@
           <plugin name="SingleCharWidget" value="com.myscript.atk.scw.SingleCharWidget" />
           <plugin name="SingleCharWidgetApi" value="com.myscript.atk.scw.SingleCharWidgetApi" />
           <plugin name="SingleLineTextWidgetStyleable" value="com.myscript.atk.sltw.SingleLineTextWidgetStyleable" />
-          <plugin name="SingleLineTextWidgetStyleableApi" value="com.myscript.atk.sltw.SingleLineTextWidgetStyleableApi" />
+          <plugin name="SingleLineTextWidgetStyleableApi" value="com.myscript.atk.sltw.SingleLineTextWidgetApi" />
         </config-file>
 
-        <!-- core SDK -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SimpleResourceHelper" >
+                <param name="android-package" value="com.myscript.atk.mltw.SimpleResourceHelper"/>
+            </feature>
+            <feature name="MyCertificate" >
+                <param name="android-package" value="com.myscript.certificate.MyCertificate"/>
+            </feature>
+        </config-file>
+
+        <!-- core (SDK) -->
         <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScript2D.so" />
         <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptAnalyzer.so" />
         <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptDocument.so" />
@@ -46,7 +56,15 @@
         <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptShape.so" />
         <lib-file src="download/myscript-android/libs/sdk/libs/armeabi-v7a/libMyScriptText.so" />
 
-        <!-- individual components -->
+        <!-- core (util) -->
+        <source-file
+            src="download/MyCertificate.java"
+            target-dir="src/com/myscript/certificate" />
+        <source-file
+            src="download/myscript-android/samples/mltw/src/com/myscript/atk/mltw/sample/SimpleResourceHelper.java"
+            target-dir="src/com/myscript/mltw/sample" />
+
+        <!-- individual components (ATK) -->
         <source-file
             src="download/myscript-android/libs/gew/libs/AtkGew.jar"
             target-dir="src/com/myscript/atk/gew" />
